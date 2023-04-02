@@ -2,8 +2,8 @@
   <div class="index-page">
     <a-input-search
       v-model:value="searchText"
-      placeholder="input search text"
-      enter-button="Search"
+      placeholder="请输入搜索关键词"
+      enter-button="搜索"
       size="large"
       @search="onSearch"
     />
@@ -102,7 +102,7 @@ const loadAllData = (params: any) => {
  * @param params
  */
 const loadData = (params: any) => {
-  const { type } = params;
+  const { type = "post" } = params;
   if (!type) {
     message.error("类别为空");
     return;
