@@ -2,7 +2,10 @@
   <a-list item-layout="horizontal" :data-source="props.postList">
     <template #renderItem="{ item }">
       <a-list-item>
-        <a-list-item-meta :description="item.content">
+        <a-list-item-meta
+          :description="item.content"
+          class="a-list-item-meta-description"
+        >
           <template #title>
             <a href="https://www.antdv.com/">{{ item.title }}</a>
           </template>
@@ -31,5 +34,10 @@ const props = withDefaults(defineProps<Props>(), {
 <style scoped>
 .gege {
   width: 200px;
+}
+.a-list-item-meta-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 </style>

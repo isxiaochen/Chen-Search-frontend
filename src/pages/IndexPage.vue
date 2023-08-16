@@ -119,6 +119,14 @@ const loadData = (params: any) => {
     } else if (type === "picture") {
       pictureList.value = res.dataList;
     }
+
+    // if (type === "post") {
+    //   postList.value = res.postList;
+    // } else if (type === "user") {
+    //   userList.value = res.userList;
+    // } else if (type === "picture") {
+    //   pictureList.value = res.pictureList;
+    // }
   });
 };
 
